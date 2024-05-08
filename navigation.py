@@ -32,7 +32,7 @@ def make_sidebar():
         st.write("")
 
         if st.session_state.get("logged_in", False):
-            st.page_link("pages/page1.py", label="Secret Company Stuff", icon="🔒")
+            st.page_link("pages/page1.py", label="Youtube Player", icon="🎼")
             st.page_link("pages/page2.py", label="More Secret Stuff", icon="🕵️")
 
             st.write("")
