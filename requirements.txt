@@ -2,5 +2,4 @@ streamlit
 streamlit_option_menu
 firebase_admin
 pytube 
-streamlit_player 
-st_player
+streamlit_player
