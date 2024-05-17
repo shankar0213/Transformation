@@ -41,7 +41,7 @@ def main():
            
             x=0
             html =  """
-            <iframe id="ytplayer" type="text/html" width="685" height="333"
+            <iframe id="ytplayer" type="text/html" width="100%" height="400"
             src="https://www.youtube.com/embed/?listType=playlist&list={}"
              encrypted-media; gyroscope; picture-in-picture"
             frameborder="0" allowfullscreen allow="autoplay"
@@ -49,7 +49,7 @@ def main():
             """
          
             while x<1:
-                st.components.v1.html(html.format(df.at[x,'playlist']),  height=350,scrolling=False)
+                st.components.v1.html(html.format(df.at[x,'playlist']),  height=400,scrolling=False)
                 x+=1
  
  
