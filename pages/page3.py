@@ -96,6 +96,10 @@ if st.button("Insert"):
     insert_data(name, email)
     st.success("Data inserted successfully!")
 
+if st.button("read Data"):
+    dff=read_data()
+    st.write(dff)
+
 st.subheader("Data")
 df = read_data()
 st.write(df)
