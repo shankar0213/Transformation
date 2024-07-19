@@ -56,17 +56,17 @@ def get_connection():
     conn = sqlite3.connect(FILE_PATH)
     return conn
 
-#def create_table():
-#    conn = get_connection()
-#    with conn:
-#        conn.execute("""
-#        CREATE TABLE IF NOT EXISTS users (
-#            id INTEGER PRIMARY KEY AUTOINCREMENT,
-#            name TEXT,
-#            email TEXT
-#        )
-#        """)
-#    conn.close()
+def create_table():
+    conn = get_connection()
+    with conn:
+        conn.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            email TEXT
+        )
+        """)
+    conn.close()
 
 def insert_data(name, email):
     conn = get_connection()
@@ -87,14 +87,14 @@ def read_data():
 # Streamlit app layout
 st.title("Database Operations")
 
-#create_table()
+create_table()
 
 st.subheader("Insert Data")
 name = st.text_input("Name")
 email = st.text_input("Email")
-#if st.button("Insert"):
-#    insert_data(name, email)
-#    st.success("Data inserted successfully!")
+if st.button("Insert"):
+    insert_data(name, email)
+    st.success("Data inserted successfully!")
 
 st.subheader("Data")
 df = read_data()
