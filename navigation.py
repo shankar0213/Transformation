@@ -27,7 +27,7 @@ def get_current_page_name():
 def make_sidebar():
     st.markdown("<style> ul {display: none;} </style>", unsafe_allow_html=True) 
     with st.sidebar:
-        st.title("💎 Diamond Corp")
+        st.title("💎 COGENCY")
         st.write("")
         st.write("")
 
